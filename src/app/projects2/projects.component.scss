@@ -1,0 +1,38 @@
+// card styling
+.mat-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-card > .mat-card-actions:last-child {
+  margin: 0 0;
+  padding: 0;
+}
+
+.mat-card-image {
+  flex-shrink: 0;
+}
+
+.title-style {
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.mat-card-content {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.card-button-small {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.card-button-app {
+  background-color: green;
+  color: white;
+  font-size: 12px;
+  line-height: 20px;
+  margin-right: 0;
+}

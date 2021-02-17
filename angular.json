@@ -33,7 +33,11 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+            "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+            "./node_modules/three/build/three.min.js",  
+            "./node_modules/vanta/dist/vanta.net.min"
+            ]
           },
           "configurations": {
             "production": {
@@ -96,7 +100,8 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         },
         "lint": {
