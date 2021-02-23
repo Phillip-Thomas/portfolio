@@ -1,0 +1,19 @@
+
+
+HTML for using dynamicac carousel from firestore
+
+      <!-- <div class='container-fluid'>  
+        <div class='col-md-6'>  
+            <ngb-carousel>
+                <ng-template ngbSlide *ngFor="let p of projectList"
+                class="card">
+                    <img [src]="p.img" class="card-img-top" >
+                    <div class="card-body" class="card-body">
+                      <h5 class="card-title"> {{ p.title }}</h5>
+                      <p class="card-text"> {{ p.text }}</p>
+                      <a href="#" class="btn btn-primary">check it out</a><br><br>
+                    </div>
+                </ng-template>
+            </ngb-carousel>  
+        </div>  
+    </div>   -->

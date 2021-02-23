@@ -34,9 +34,9 @@
               "src/styles.scss"
             ],
             "scripts": [
+            "node_modules/jquery/dist/jquery.js",
             "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-            "./node_modules/three/build/three.min.js",  
-            "./node_modules/vanta/dist/vanta.net.min"
+            "node_modules/wowjs/dist/wow.js"
             ]
           },
           "configurations": {

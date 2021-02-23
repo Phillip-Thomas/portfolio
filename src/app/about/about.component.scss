@@ -1,0 +1,73 @@
+@import './assets/styles/main.css';
+// @import './assets/styles/main.css.map';
+@import './assets/styles/responsive.css';
+// @import './assets/styles/responsive.css.map';
+@import './assets/styles/template-picker.css';
+// @import './assets/styles/template-picker.css.map';
+@import './assets/styles/vendor/animate.css';
+@import './assets/styles/vendor/animate.css';
+@import './assets/styles/vendor/animated-heading.css';
+@import './assets/styles/vendor/slick.css';
+@import './assets/fonts/et-lineicons/css/style.css';
+
+// @import './assets/styles/vendor/glyphicons.css';
+// @import './assets/styles/vendor/bootstrap.css';
+@import './assets/styles/scss/settings';
+@import './assets/styles/scss/features';
+
+@import './assets/styles/scss/utility';
+@import './assets/styles/scss/comingsoon';
+
+:host {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background: #fdc162;
+  }
+
+.about {
+    top:56px;
+    width: 100%;
+    height: calc(100%-56px);
+    position: absolute;
+
+}
+
+.infoSec {
+    width: 45%;
+    height: 100%;
+    position: relative;
+    margin:10px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.imageSec {
+    width: 45%;
+    height: 100%;
+    position: relative;
+    right: 0px;
+    margin:10px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.imgMe {
+    width: 30vw;
+    height: calc(30vw * (1/.801));
+    left: 50%
+}
+
+.sec-heading {
+        text-align: center;
+        left: 50%;
+        position: relative;
+        transform: translate(-50%, 10px);
+}
+
+.first {
+    color: white;
+}

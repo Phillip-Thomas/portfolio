@@ -1,49 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { fade, jackBox, slowSlide, slideAnimation } from './../animations';
+import { fade, jackBox, slowSlide, slideAnimation, slideInOutAnimation } from './../animations';
 import * as d3 from "d3";
-import { trigger, state, transition, style, animate, keyframes, useAnimation } from '@angular/animations'
+import { NgwWowService } from 'ngx-wow';
+import { trigger, state, transition, style, animate, keyframes, useAnimation } from '@angular/animations';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   animations: [
+    slideInOutAnimation,
     fade,
     slowSlide,
-    jackBox,
-    trigger('mainAnimation', [
-      transition(':enter', [
-        useAnimation(slideAnimation,{
-          params: {
-            duration: '500ms',
-            delay: '.33s'
-          }
-        })
-      ])
-    ]),
-    trigger('mainAnimation2', [
-      transition(':enter', [
-        useAnimation(slideAnimation,{
-          params: {
-            duration: '500ms',
-            delay: '.66s'
-          }
-        })
-      ])
-    ]),
-    trigger('mainAnimation3', [
-      transition(':enter', [
-        useAnimation(slideAnimation,{
-          params: {
-            duration: '500ms',
-            delay: '.99s'
-          }
-        })
-      ])
-    ]),
-  ]
+    jackBox]
 })
 export class HomeComponent implements OnInit {
-  constructor() { }
+
+  constructor(private wowService: NgwWowService) {
+    this.wowService.init();
+  }
 
   ngOnInit(): void {
     this.buildSystem()

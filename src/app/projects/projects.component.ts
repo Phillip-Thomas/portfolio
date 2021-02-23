@@ -1,13 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { ISourceOptions } from 'tsparticles';
 import { trigger, state, transition, style, animate, keyframes, useAnimation } from '@angular/animations'
-import { fade, jackBox, slowSlide, slideAnimation } from './../animations';
+import { fade, jackBox, slowSlide, slideAnimation, slideInOutAnimation, fadeInAnimation } from './../animations';
 import { ViewportScroller } from '@angular/common';
+import { ProductService } from '../product.service';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NgwWowService } from 'ngx-wow';
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
   animations: [
+        slideInOutAnimation,
+        fadeInAnimation,
         fade,
         slowSlide,
         jackBox,
@@ -41,10 +48,26 @@ import { ViewportScroller } from '@angular/common';
             })
           ])
         ]),
-      ]
+      ],
+      host: { '[@fadeInAnimation]': '' }
+
 })
 export class ProjectsComponent {
-  constructor(private viewportScroller: ViewportScroller) {}
+  list: any
+  projectList: any
+  constructor(private viewportScroller: ViewportScroller,
+              private productService: ProductService,
+              public config: NgbCarouselConfig,
+              private wowService: NgwWowService) {
+                this.list = this.productService.getList()
+                this.list.subscribe((snapshot: any) => {
+                  this.projectList = snapshot})
+                  config.interval = 4000;  
+                  config.wrap = true;  
+                  config.keyboard = false;  
+                  config.pauseOnHover = false;
+                this.wowService.init();
+            }
 
   public onClick(elementId: string): void { 
         this.viewportScroller.scrollToAnchor(elementId);
