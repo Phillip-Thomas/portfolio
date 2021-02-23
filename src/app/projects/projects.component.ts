@@ -48,8 +48,9 @@ import { NgwWowService } from 'ngx-wow';
             })
           ])
         ]),
-      ],
-      host: { '[@fadeInAnimation]': '' }
+      ]
+      // ,
+      // host: { '[@fadeInAnimation]': '' }
 
 })
 export class ProjectsComponent {
