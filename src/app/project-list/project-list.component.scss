@@ -1,0 +1,31 @@
+
+.exit {
+    font-size: 48px;
+    color: white;
+    position: absolute;
+    left: 45%;
+    top: calc(50% - 40px)
+}
+
+.mat-card {
+    background-color: transparent
+  }
+  
+  .mr-10 {
+    margin-right: 10px;
+  }
+  
+  .ml-10 {
+    margin-left: 10px;
+  }
+
+.image {
+    width: 250px;
+    height: 250px;
+    // border-radius: 4px;
+    border-color: grey;
+    border-width: 2px;
+    border-style: solid;
+    cursor:pointer;
+    margin: 10px;
+}

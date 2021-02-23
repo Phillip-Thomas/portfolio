@@ -1,49 +1,18 @@
 <Particles id="tsparticles" class="particles" [options]="particlesOptions"></Particles>
 <div class="main">
+  <div class="wow slideInLeft" data-wow-duration=".5s" data-wow-delay=".3s">
     <h1 @mainAnimation  hover-class="hovering" style="display: inline-block;">I&#160;</h1>
     <h1 @mainAnimation  hover-class="hovering" style="display: inline-block;">Like&#160;</h1>
     <h1 @mainAnimation  hover-class="hovering" style="display: inline-block;">to&#160;</h1>
     <h1 @mainAnimation  hover-class="hovering" style="display: inline-block;">build&#160;</h1>
-    <h5 @mainAnimation2 hover-class="hovering" >Interactive web apps</h5>
-    <button class="btn-ghost" @mainAnimation3 hover-class="hovering2" (click)="onClick('projects')"><h5>Check it out</h5></button>
+  </div>
+  <div  class="wow slideInLeft" data-wow-duration=".5s" data-wow-delay=".6s">
+    <h5 hover-class="hovering"  style="display: inline-block;">Interactive&#160;</h5>
+    <h5 hover-class="hovering"  style="display: inline-block;">Web&#160;</h5>
+    <h5 hover-class="hovering"  style="display: inline-block;">Apps&#160;</h5>
+  </div> 
+    <button class="wow fadeIn" data-wow-duration=".5s" data-wow-delay=".9s" hover-class="hovering" routerLink="list"><h5>Check it out</h5></button>
 </div>
-<div id="projects" class="projects">
-
-        <h1 class="wow slideInDown" style="color:white; text-align: center; position: relative; top: 56px;">Here's a few examples</h1>
- 
-
-
-    <br><br>
-
-<div style="position:relative; top: 100px; padding: 30px;" fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px" ngClass.gt-xs="ml-10">
-  
-  <mat-card class="wow slideInDown" data-wow-duration=".5s" data-wow-delay=".1s" fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(25%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
-    <!-- <mat-card-title>Flow Roll JJ</mat-card-title> -->
-    <a href="https://view.flowrolljj.com"><img href="https://view.flowrolljj.com" hover-class="hovering" mat-card-image src="./../../assets/dashboard.PNG" class="image"></a>
-    <!-- <mat-card-content>Primary card content. Intended for blocks of text</mat-card-content>
-    <mat-card-actions>Container for buttons at the bottom of the card</mat-card-actions> -->
-  </mat-card>
-  
-  <mat-card class="wow slideInDown" data-wow-duration=".5s" data-wow-delay=".2s"  fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(25%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
-    <!-- <mat-card-title>Ecommerce</mat-card-title> -->
-    <a href="https://ecommerce-84051.web.app/"><img hover-class="hovering" mat-card-image src="./../../assets/ecommerce.PNG" class="image"></a>
-    <!-- <mat-card-content>Primary card content. Intended for blocks of text</mat-card-content>
-    <mat-card-actions>Container for buttons at the bottom of the card</mat-card-actions> -->
-  </mat-card>
-
-  <mat-card  class="wow slideInDown" data-wow-duration=".5s" data-wow-delay=".3s"fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(25%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
-    <!-- <mat-card-title>D3.js Tree Builder</mat-card-title> -->
-    <a href="https://flowrolljj.com"><img  hover-class="hovering" mat-card-image  style="" src="./../../assets/landing.PNG" class="image"></a>
-    <!-- <mat-card-content>Primary card content. Intended for blocks of text</mat-card-content>
-    <mat-card-actions>Container for buttons at the bottom of the card</mat-card-actions> -->
-  </mat-card>
-
-  <mat-card  class="wow slideInDown" data-wow-duration=".5s" data-wow-delay=".4s"fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(25%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)">
-    <!-- <mat-card-title>Personal Portfolio</mat-card-title> -->
-    <a href="https://portfolio-9943f.web.app/"><img  hover-class="hovering" mat-card-image src="./../../assets/portfolio.PNG" class="image"></a>
-    <!-- <mat-card-content>Primary card content. Intended for blocks of text</mat-card-content>
-    <mat-card-actions>Container for buttons at the bottom of the card</mat-card-actions> -->
-  </mat-card>
-
-</div>
+<div class="view-side-form">
+  <router-outlet></router-outlet>
 </div>

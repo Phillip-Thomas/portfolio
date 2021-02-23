@@ -26,9 +26,9 @@ export class HomeComponent implements OnInit {
   buildSystem(this: any)  {
 
       // establish variables
-      var w     = 1000;
-      var h     = 1000;
-      var x     = (w/2) - 250;
+      var w     = 1400;
+      var h     = 800;
+      var x     = (w/2);
       var y     = (h/2) - 150;
       var t0    = new Date().setHours(0,0,0,0);
       var delta = (Date.now() - t0);

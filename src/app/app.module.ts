@@ -17,6 +17,7 @@ import {DemoMaterialModule} from './material-module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { NgwWowModule } from 'ngx-wow';
 import { HoverClassDirective } from './hover.directive';
+import { ProjectListComponent } from './project-list/project-list.component';
 
 const  firebaseConfig = {
   apiKey: "AIzaSyBcvj1xmpI_Vs6dPtHNDuPOosDll-9h4aI",
@@ -37,7 +38,8 @@ const  firebaseConfig = {
     ProjectsComponent,
     ExperienceComponent,
     ContactComponent,
-    HoverClassDirective
+    HoverClassDirective,
+    ProjectListComponent
   ],
   imports: [
     BrowserModule,

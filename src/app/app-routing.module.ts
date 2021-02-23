@@ -5,6 +5,7 @@ import {AboutComponent} from './about/about.component'
 import {ExperienceComponent} from './experience/experience.component'
 import {ProjectsComponent} from './projects/projects.component'
 import { ContactComponent } from './contact/contact.component';
+import { ProjectListComponent } from './project-list/project-list.component';
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {
@@ -17,7 +18,10 @@ const routes: Routes = [
     path: 'experience', component: ExperienceComponent, data: {state:  'experience'}  
   },
   {
-    path: 'projects', component: ProjectsComponent, data: {state:  'projects'}  
+    path: 'projects', component: ProjectsComponent, data: {state:  'projects'},
+    children: [
+      { path: 'list', component: ProjectListComponent }
+    ]  
   },
   {
     path: 'contact', component: ContactComponent, data: {state:  'contact'}  

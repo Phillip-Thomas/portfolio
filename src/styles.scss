@@ -30,3 +30,17 @@ html {
     stroke: #ccc;
     fill: #fff;
   }
+
+  .view-side-form {
+    .side-form {
+        position: absolute;
+        z-index: 100;
+        top: 56px;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        overflow: auto;
+        background: transparent;
+        padding: 20px;
+    }
+}
