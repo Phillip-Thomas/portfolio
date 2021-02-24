@@ -32,7 +32,28 @@ export let fade = trigger('fade', [
         }
     })
 
-  export let fastSlide = trigger('fastSlide', [
+    export let aboutSlide1 = trigger('aboutSlide1', [
+      transition('void => *', [ 
+        style({transform: 'translateX(-1000px)', opacity: 0}),
+        animate('.5s .33s cubic-bezier(.73,.2,0,1.67)')
+      ])
+    ])
+
+    export let aboutSlide2 = trigger('aboutSlide2', [
+      transition('void => *', [ 
+        style({transform: 'translateX(-1000px)', opacity: 0}),
+        animate('.5s .66s cubic-bezier(.73,.2,0,1.67)')
+      ])
+    ])
+
+    export let aboutSlide3 = trigger('aboutSlide3', [
+      transition('void => *', [ 
+        style({transform: 'translateX(-1000px)', opacity: 0}),
+        animate('.5s .99s cubic-bezier(.73,.2,0,1.67)')
+      ])
+    ])
+
+  export let fastSlide = trigger('aboutSlide3', [
     transition('void => *', [ 
       style({transform: 'translateX(-1000px)', opacity: 0}),
       animate('.5s .25s cubic-bezier(.73,.2,0,1.67)')
