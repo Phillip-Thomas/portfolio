@@ -1,6 +1,6 @@
 
     <section id="offer" class="container ft-centered">
-        <div class="row" style=" top: 100px; position: relative">
+        <div class="row" style=" top: 75px; position: relative">
 
           <header class="sec-heading" style="width:100%;">
             <h2 class="first wow fadeInDown">Let's build something incredible</h2><br>
@@ -32,7 +32,7 @@
           <i class="fa fa-pencil prefix grey-text"></i><label for="contactFormMessage">Your message</label>
           <textarea type="text" id="contactFormMessage" formControlName="contactFormMessage" class="md-textarea" style="height: 100px; width: 100%" mdbInput [(ngModel)]="itemMessage"> 
           </textarea>
-          </div>
+          </div><br>
      
           <div class="text-center">
           <button [disabled]="contactForm.invalid" (click)="onSubmit()" (click)="clearForm()" type="submit" class="btn waves-light" mdbWavesEffect>Send

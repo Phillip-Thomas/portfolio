@@ -35,10 +35,10 @@ export class ContactComponent {
     }
   // Pushing the contact-form to the firebase data base
   onSubmit()  {
-    this.db.collection('messages')
-    // .push({ name: this.itemName, email: this.itemEmail, subject: this.itemSubject, 
-    // message: this.itemMessage});
-//Popup message
+    this.db.collection('messages').add({ name: this.itemName, email: this.itemEmail, subject: this.itemSubject, 
+    message: this.itemMessage});
+    
+    //Popup message
     alert('Thank you for contacting us, your message has gone through!')
    }
 
