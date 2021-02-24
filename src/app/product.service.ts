@@ -16,4 +16,8 @@ export class ProductService {
   getList() {
     return this.db.collection('projects').valueChanges()
   }
+
+  sendMessage(values: any) {
+    console.log(values)
+  }
 }

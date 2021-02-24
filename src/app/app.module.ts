@@ -18,6 +18,9 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { NgwWowModule } from 'ngx-wow';
 import { HoverClassDirective } from './hover.directive';
 import { ProjectListComponent } from './project-list/project-list.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 const  firebaseConfig = {
   apiKey: "AIzaSyBcvj1xmpI_Vs6dPtHNDuPOosDll-9h4aI",
@@ -51,7 +54,9 @@ const  firebaseConfig = {
     BrowserAnimationsModule,
     DemoMaterialModule,
     FlexLayoutModule,
-    NgwWowModule
+    NgwWowModule,
+    MDBBootstrapModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

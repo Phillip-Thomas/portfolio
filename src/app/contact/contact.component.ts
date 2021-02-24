@@ -1,15 +1,51 @@
-import { Component, OnInit } from '@angular/core';
+import { NgwWowService } from 'ngx-wow';
+import { fadeInAnimation, slideInOutAnimation } from '../animations';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { ProductService } from '../product.service';
+import { AngularFirestore } from '@angular/fire/firestore'; 
+import  { Observable } from  'rxjs';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  animations: [fadeInAnimation,
+    slideInOutAnimation]
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
+   // Adding variables
+   itemName: any;
+   itemEmail: any;
+   itemSubject: any;
+   itemMessage: any;
+   items: any;
+   contactForm: FormGroup;
 
-  constructor() { }
+  constructor(private wowService: NgwWowService,
+    private fb: FormBuilder, private db: AngularFirestore) {
+      this.items = db.collection('messages').valueChanges()
+      // Passing in MD_Bootstrap form validation 
+              this.contactForm = fb.group({
+              contactFormName: ['', Validators.required],
+              contactFormEmail: ['', [Validators.required, Validators.email]],
+              contactFormSubject: ['', Validators.required],
+              contactFormMessage: ['', Validators.required]
+           });
+    }
+  // Pushing the contact-form to the firebase data base
+  onSubmit()  {
+    this.db.collection('messages')
+    // .push({ name: this.itemName, email: this.itemEmail, subject: this.itemSubject, 
+    // message: this.itemMessage});
+//Popup message
+    alert('Thank you for contacting us, your message has gone through!')
+   }
 
-  ngOnInit(): void {
-  }
+// Clearing the form after submit
+  clearForm() {
+        this.contactForm.reset();
+      }
+
 
 }

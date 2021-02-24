@@ -1,1 +1,49 @@
-<p>whats up bro</p>
+
+    <section id="offer" class="container ft-centered">
+        <div class="row" style=" top: 100px; position: relative">
+
+          <header class="sec-heading" style="width:100%;">
+            <h2 class="first wow fadeInDown">Let's build something incredible</h2><br>
+            <span class="sub wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">Leave your info below</span><br>
+          </header>
+
+          <div class="card mb-5 container ft-centered">
+          <div class="md-form">
+          <form [formGroup]="contactForm">
+     
+     
+          <div class="md-form">
+          <i class="fa fa-user prefix grey-text"></i><label for="contactFormName">Your name</label>
+          <input type="text" id="contactFormName" formControlName="contactFormName" class="form-control" mdbInput [(ngModel)]="itemName">
+          
+          </div>
+     
+          <div class="md-form">
+          <i class="fa fa-envelope prefix grey-text"></i><label for="contactFormEmail">Your email</label>
+          <input type="email" id="contactFormEmail" formControlName="contactFormEmail" class="form-control" mdbInput [(ngModel)]="itemEmail">
+          </div>
+     
+          <div class="md-form">
+          <i class="fa fa-tag prefix grey-text"></i><label for="contactFormSubject">Subject</label>
+          <input type="text" id="contactFormSubject" formControlName="contactFormSubject" class="form-control" mdbInput [(ngModel)]="itemSubject">
+          </div>
+     
+          <div class="md-form">
+          <i class="fa fa-pencil prefix grey-text"></i><label for="contactFormMessage">Your message</label>
+          <textarea type="text" id="contactFormMessage" formControlName="contactFormMessage" class="md-textarea" style="height: 100px; width: 100%" mdbInput [(ngModel)]="itemMessage"> 
+          </textarea>
+          </div>
+     
+          <div class="text-center">
+          <button [disabled]="contactForm.invalid" (click)="onSubmit()" (click)="clearForm()" type="submit" class="btn waves-light" mdbWavesEffect>Send
+          <i class="fa fa-paper-plane-o ml-1"></i>
+          </button>
+          <br>
+          </div> 
+          </form>
+        </div>
+      </div>
+      
+    </div>
+          
+    

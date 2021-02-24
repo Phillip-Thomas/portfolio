@@ -1,3 +1,18 @@
+@import './../about/assets/styles/vendor/animate.css';
+@import './../about/assets/styles/main.css';
+@import './../about/assets/styles/responsive.css';
+@import './../about/assets/styles/template-picker.css';
+@import './../about/assets/styles/vendor/animate.css';
+@import './../about/assets/styles/vendor/animated-heading.css';
+@import './../about/assets/styles/vendor/slick.css';
+@import './../about/assets/fonts/et-lineicons/css/style.css';
+
+@import './../about/assets/styles/scss/settings';
+@import './../about/assets/styles/scss/features';
+@import './../about/assets/styles/scss/utility';
+@import './../about/assets/styles/scss/comingsoon';
+@import './../about/assets/styles/scss/forms';
+
 
 
 :host {
@@ -7,4 +22,22 @@
     height: 100%;
     background: #379683;
    }
+
+.card{
+    background-color: transparent;
+    max-width: 400px;
+    position: relative;
+}
+
+.sec-heading {
+    margin-bottom: 0;
+}
  
+   .sub {
+    display: block;
+    text-transform: uppercase;
+    font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 2.5px;
+}
