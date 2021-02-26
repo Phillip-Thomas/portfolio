@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { fade, jackBox, slowSlide, slideAnimation, slideInOutAnimation } from './../animations';
 import * as d3 from "d3";
 import { NgwWowService } from 'ngx-wow';
-import { trigger, state, transition, style, animate, keyframes, useAnimation } from '@angular/animations';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

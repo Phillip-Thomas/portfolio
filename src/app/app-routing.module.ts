@@ -6,13 +6,21 @@ import {ExperienceComponent} from './experience/experience.component'
 import {ProjectsComponent} from './projects/projects.component'
 import { ContactComponent } from './contact/contact.component';
 import { ProjectListComponent } from './project-list/project-list.component';
+import { DevComponent } from './dev/dev.component';
+import { TradeComponent } from './trade/trade.component';
+import { BjjComponent } from './bjj/bjj.component';
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {
     path: 'home', component: HomeComponent, data: {state:  'home'}  
   },
   {
-    path: 'about', component: AboutComponent, data: {state:  'about'}  
+    path: 'about', component: AboutComponent, data: {state:  'about'},
+    children: [
+      { path: 'dev', component: DevComponent},
+      { path: 'trade', component: TradeComponent },
+      { path: 'bjj', component: BjjComponent }
+    ]    
   },
   {
     path: 'experience', component: ExperienceComponent, data: {state:  'experience'}  

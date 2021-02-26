@@ -53,7 +53,7 @@ export let fade = trigger('fade', [
       ])
     ])
 
-  export let fastSlide = trigger('aboutSlide3', [
+  export let fastSlide = trigger('fastSlide', [
     transition('void => *', [ 
       style({transform: 'translateX(-1000px)', opacity: 0}),
       animate('.5s .25s cubic-bezier(.73,.2,0,1.67)')

@@ -7,7 +7,7 @@
 html { 
     overflow-x: hidden;
     overflow-y:visible;
-    background-color: #333333; }
+    background-color: #B1A296; }
 
 
 
@@ -31,16 +31,30 @@ html {
     fill: #fff;
   }
 
-  .view-side-form {
+  .view-project-form {
     .side-form {
         position: absolute;
-        z-index: 100;
+        z-index: 999999;
         top: 56px;
         right: 0;
-        width: 50%;
+        width: 66%;
         height: 100%;
         overflow: auto;
         background: transparent;
         padding: 20px;
     }
+}
+
+.view-about-form {
+  .side-form {
+      position: absolute;
+      z-index: 999999;
+      top: 56px;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      overflow: auto;
+      background: #B1A296;
+      padding: 20px;
+  }
 }

@@ -1,0 +1,15 @@
+
+.exit {
+    font-size: 48px;
+    color: white;
+    position: absolute;
+    left: 45%;
+    top: calc(50% - 40px)
+}
+
+.hovering {
+  zoom: 120%;
+  z-index: 99999;
+  animation: jello .8s;
+  color: #b1a296;
+}

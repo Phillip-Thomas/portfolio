@@ -1,5 +1,4 @@
-
-    <div class="page">
+    <div class="page" style="z-index: 100;">
     <section id="offer" class="container ft-centered">
 
           <header class="sec-heading" style="width:100%; text-align: center;  top: 75px; position: relative">
@@ -7,23 +6,24 @@
           </header>
           
           
-        <div class="row wow slideInUp" style="top: 50px; position:relative;">
-          <!-- Item 1 -->
-          <div class="skills col-md-4 col-sm-6 mb-sm-50 ft-item ft-basic" hover-class="hovering" style="border-style: solid; border-width: 2px; border-radius: 15px;">
-            <img  style="width: 128px; height:128px;"  hover-class="hovering" src="https://cdn.worldvectorlogo.com/logos/angular-icon.svg">
-            <h5 class="first">software engineer</h5>
-            <p>I build responsive, mobile friendly, and cross-platform Single Page Applications such as the one you are viewing now!</p>
-          </div>
+        <div class="row wow slideInUp" style="top: 50px; position:relative;" >
+            <div class="skills col-md-4 col-sm-6 mb-sm-50 ft-item ft-basic" hover-class="hovering" style="z-index:0; position: relative; border-style: solid; border-width: 2px; border-radius: 15px;" (click)="redirectDev()">
+              <img  style="width: 128px; height:128px;"  hover-class="hovering" src="https://cdn.worldvectorlogo.com/logos/angular-icon.svg">
+              <h5 class="first">software engineer</h5>
+              <p>I build responsive, mobile friendly, and cross-platform Single Page Applications such as the one you are viewing now!</p>
+
+            </div>
+
 
           <!-- Item 2 -->
-          <div class="skills col-md-4 col-sm-6 mb-sm-50 ft-item ft-basic" hover-class="hovering" style="border-style: solid; border-width: 2px; border-radius: 15px;">
+          <div class="skills col-md-4 col-sm-6 mb-sm-50 ft-item ft-basic" hover-class="hovering" style="z-index:0;border-style: solid; border-width: 2px; border-radius: 15px;" (click)="redirectTrade()">
             <img  style="width: 128px; height:128px;" src="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/128/Ethereum-ETH-icon.png">
             <h5 class="first">Algorithmic day Trader</h5>
             <p>I develop highly profitable automated trading bots for long term investing as well as intra day scalping.</p>
           </div>
 
           <!-- Item 3 -->
-          <div class="skills col-md-4 col-sm-6 mb-sm-50 ft-item ft-basic" hover-class="hovering" style="border-style: solid; border-width: 2px; border-radius: 15px;">
+          <div class="skills col-md-4 col-sm-6 mb-sm-50 ft-item ft-basic" hover-class="hovering" style="z-index:0;border-style: solid; border-width: 2px; border-radius: 15px;" (click)="redirectBJJ()">
             <img  style="width: 128px; height:128px;" src="http://sacbjj.com/wp-content/uploads/2016/09/silhouette-icons-12.png">
             <h5 class="first">Jiu Jitsu Athlete</h5>
             <p>I am a competitive purple belt in Brazilian Jiu Jitsu as well as an instructor.</p>
@@ -31,4 +31,7 @@
 
         </div><!-- / .row -->
       </section>
+    </div>
+    <div class="view-about-form">
+      <router-outlet></router-outlet>
     </div>

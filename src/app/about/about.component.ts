@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgwWowService } from 'ngx-wow';
 import { fadeInAnimation, slideInOutAnimation } from '../animations';
-import { aboutSlide1, aboutSlide2, aboutSlide3 } from './../animations'
+import { aboutSlide1, aboutSlide2, aboutSlide3 } from './../animations';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -13,11 +14,22 @@ import { aboutSlide1, aboutSlide2, aboutSlide3 } from './../animations'
 
 export class AboutComponent implements OnInit {
 
-  constructor(private wowService: NgwWowService) {
+  constructor(private wowService: NgwWowService,
+              private router: Router) {
     this.wowService.init();
   }
 
   ngOnInit(): void {
+  }
+
+  redirectDev() {
+    this.router.navigate(['about/dev']);
+  }
+  redirectTrade() {
+    this.router.navigate(['about/trade']);
+  }
+  redirectBJJ() {
+    this.router.navigate(['about/bjj']);
   }
 
 }

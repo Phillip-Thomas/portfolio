@@ -20,6 +20,9 @@ import { HoverClassDirective } from './hover.directive';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DevComponent } from './dev/dev.component';
+import { TradeComponent } from './trade/trade.component';
+import { BjjComponent } from './bjj/bjj.component';
 
 
 const  firebaseConfig = {
@@ -42,7 +45,10 @@ const  firebaseConfig = {
     ExperienceComponent,
     ContactComponent,
     HoverClassDirective,
-    ProjectListComponent
+    ProjectListComponent,
+    DevComponent,
+    TradeComponent,
+    BjjComponent
   ],
   imports: [
     BrowserModule,
