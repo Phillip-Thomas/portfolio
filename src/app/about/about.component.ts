@@ -31,5 +31,8 @@ export class AboutComponent implements OnInit {
   redirectBJJ() {
     this.router.navigate(['about/bjj']);
   }
+  redirectClose() {
+    this.router.navigate(['./about']);
+  }
 
 }

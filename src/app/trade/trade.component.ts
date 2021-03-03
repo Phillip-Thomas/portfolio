@@ -21,4 +21,9 @@ export class TradeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+  redirectClose() {
+    this.router.navigate(['./about']);
+  }
+  
 }

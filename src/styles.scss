@@ -46,13 +46,22 @@ html {
 }
 
 .view-about-form {
+  z-index: 1;
+  .blank {
+    position: absolute;
+    left: 0;
+    width:50%;
+    height: 100%;
+    overflow: auto;
+    background: transparent;
+  }
   .side-form {
       position: absolute;
-      z-index: 999999;
+      z-index: 1;
       top: 56px;
       right: 0;
       width: 50%;
-      height: 100%;
+      height: calc(100% - 56px);
       overflow: auto;
       background: #B1A296;
       padding: 20px;

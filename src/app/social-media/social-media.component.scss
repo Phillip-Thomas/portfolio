@@ -1,0 +1,14 @@
+.socialMedia {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 0;
+    .SM {
+        position: relative;
+        z-index: 0;
+        font-size: 30px;
+        padding:15px;
+        color: lightblue;
+    }
+}

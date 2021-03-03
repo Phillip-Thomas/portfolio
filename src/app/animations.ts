@@ -88,6 +88,27 @@ export let fade = trigger('fade', [
     ])
   ])
 
+  export let upSlide1 = trigger('upSlide1', [
+    transition('void => *', [ 
+      style({transform: 'translateY(100px)', opacity: 0}),
+      animate('.5s .33s cubic-bezier(.73,.2,0,1.67)')
+    ])
+  ])
+
+  export let upSlide2 = trigger('upSlide2', [
+    transition('void => *', [ 
+      style({transform: 'translateY(100px)', opacity: 0}),
+      animate('.5s .66s cubic-bezier(.73,.2,0,1.67)')
+    ])
+  ])
+
+  export let upSlide3 = trigger('upSlide3', [
+    transition('void => *', [ 
+      style({transform: 'translateY(100px)', opacity: 0}),
+      animate('.5s 1s cubic-bezier(.73,.2,0,1.67)')
+    ])
+  ])
+
   export let jackBox = trigger('jackBox', [
     transition('void => *', [ 
       style({transform: 'translateX(-1000px)', opacity: 0}),

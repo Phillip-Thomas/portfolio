@@ -2,8 +2,32 @@
 <div style="display: inline-block;" class="exit">
     <i class="fa fa-long-arrow-right" routerLink="/about" routerLinkActive= "active" ></i>
 </div>
+<div class="blank" (click)="redirectClose()"></div>
 <div class="side-form">
+    <header class="sec-heading" style="width:100%; text-align: center;  top: 0px; position: relative">
+        <h2 class="first wow fadeInDown">Algorithmic Trading</h2><br>
+    </header>
+    <p>
+        I have spent the larger portion of my life heavily interested in trading/investing. Despite this 
+        vast interest however, as one can imagine, I mostly just lost money when starting out at the age
+        of 18. I then continued to lose money, albeit to a lesser extent, for nearly a decade before I finally
+        understood how to be consistently profitable.<br><br>
 
+        While attempting to explain the recipe for profitability is a bit beyond the scope of this portfolio, 
+        I will say that I eventually found the primary problem to be that I am not a machine and thus am subject 
+        to vulnerable behaviours such as emotion, greed, and sleep. To remidy this, I dedicated much of my time
+        to translating my trading logic into code and building the architecture necessary to implement it. Now, 
+        I just sit back and watch as my logic is implemented on dozens of cryptocurrencies simultanesouly
+        on time frames most humans just can't keep up with.<br><br>
 
+        To implement these strategies, I've written several scripts with various purpose in a language known as Pine Script,
+        A programming language developed by Trading View. These strategies provide signals on charts provided by Trading View
+        which can be based on any number of indicators. These signals when fired send a webhook to a REST api I've built.
+        Here, I use node.js to perform any logic not directly related to signaling such as money management and risk/reward 
+        analysis. A new webhook is then fired to an exchange which places the orders and relays the information back for accounting.<br><br>
 
+        Over the years, these strategies have grown and grown in complexity. I now consistently beat the market, mitigate the drawdown
+        of buying and holding, and all while I'm off living my life! Very soon these strategies will be available for subscription
+        usage!
+    </p>
 </div>

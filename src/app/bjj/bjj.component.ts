@@ -21,4 +21,9 @@ export class BjjComponent implements OnInit {
   ngOnInit(): void {
   }
 
+      
+  redirectClose() {
+    this.router.navigate(['./about']);
+  }
+
 }

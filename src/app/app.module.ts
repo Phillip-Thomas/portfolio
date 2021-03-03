@@ -23,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DevComponent } from './dev/dev.component';
 import { TradeComponent } from './trade/trade.component';
 import { BjjComponent } from './bjj/bjj.component';
+import { SocialMediaComponent } from './social-media/social-media.component';
 
 
 const  firebaseConfig = {
@@ -48,7 +49,8 @@ const  firebaseConfig = {
     ProjectListComponent,
     DevComponent,
     TradeComponent,
-    BjjComponent
+    BjjComponent,
+    SocialMediaComponent
   ],
   imports: [
     BrowserModule,

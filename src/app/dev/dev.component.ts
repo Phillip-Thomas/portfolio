@@ -17,6 +17,10 @@ export class DevComponent implements OnInit {
     private router: Router
 ) { }
 
+    
+  redirectClose() {
+    this.router.navigate(['./about']);
+  }
 
   ngOnInit(): void {
   }
